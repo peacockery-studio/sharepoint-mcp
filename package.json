@@ -1,0 +1,49 @@
+{
+	"name": "@peacockery-studio/sharepoint-mcp",
+	"version": "1.0.0",
+	"description": "MCP server for Claude to access SharePoint data via Microsoft Graph API",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"auth-server": "node sharepoint-auth-server.js",
+		"test-mode": "USE_TEST_MODE=true node index.js",
+		"inspect": "npx @modelcontextprotocol/inspector node index.js",
+		"test": "jest",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format --write ."
+	},
+	"keywords": [
+		"claude",
+		"sharepoint",
+		"mcp",
+		"model-context-protocol",
+		"microsoft-graph",
+		"documents",
+		"files",
+		"anthropic"
+	],
+	"author": "Chi Ejimofor",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/peacockery-studio/sharepoint-mcp.git"
+	},
+	"bugs": {
+		"url": "https://github.com/peacockery-studio/sharepoint-mcp/issues"
+	},
+	"homepage": "https://github.com/peacockery-studio/sharepoint-mcp#readme",
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.24.3",
+		"dotenv": "^16.5.0",
+		"zod": "^4.1.13"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.8",
+		"@modelcontextprotocol/inspector": "^0.17.5",
+		"jest": "^29.7.0"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
+}
